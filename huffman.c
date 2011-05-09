@@ -233,7 +233,7 @@ static void WriteArchive(HuffmanArchive *HA, int argc, char **argv,
 /* Find how many times characters from all
  * files repeat; also calculate checksum
  */
-void FormNodes(Node *n, int argc, FILE **f, HuffmanArchive *HA) {
+static void FormNodes(Node *n, int argc, FILE **f, HuffmanArchive *HA) {
 	unsigned char *byte;
 	int i, j, bytes, incr = 0;
 	
@@ -261,7 +261,7 @@ void FormNodes(Node *n, int argc, FILE **f, HuffmanArchive *HA) {
 	}
 }
 
-void AddNodesToHeap(Heap *h, Node *n) {
+static void AddNodesToHeap(Heap *h, Node *n) {
 	int i;
 
 	/* add the nodes for the HuffmanTree into heap */
@@ -270,7 +270,7 @@ void AddNodesToHeap(Heap *h, Node *n) {
 			HeapInsert(h, &n[i], CompareByRepeat);
 }
 
-void HuffmanTreeCreate(Heap *h, Node *n, HuffmanArchive *HA) {
+static void HuffmanTreeCreate(Heap *h, Node *n, HuffmanArchive *HA) {
 	Node *n1, *n2;
 	int c = 256;
 	
