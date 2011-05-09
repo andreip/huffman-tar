@@ -1,0 +1,5 @@
+How to use it:
+
+1. Just type 'make' in your terminal, in the current folder
+2. Use './hufftar <compress> <extract> <list>' and some parameters. If you 
+   do it wrong, you'll be shown the usage anyway.
