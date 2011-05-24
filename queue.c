@@ -47,13 +47,5 @@ int QueueEmpty(Queue q) {
 void QueueFree(Queue q) {
 	if (q == NULL)
 		return;
-//	QNode iter1, iter2;
-//	iter2 = q->front;
-//	while (iter2 != q->back) {
-//		iter1 = iter2;
-//		iter2 = iter1->next;
-//		free(iter1);
-//	}
-//	free(iter2);
 	free(q);
 }
