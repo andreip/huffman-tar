@@ -1,12 +1,12 @@
-About
----
+# About
 
 It's a compression tool like `tar czf file.zip file1 file2 ...`, but it does compression
 by using the huffman coding trees.
 
+It does not work with directories, only with simple files for simplicity.
 
-How it works
----
+
+# How it works
 
 Follow the below steps and see it working
 
@@ -27,8 +27,7 @@ $ ./hufftar extract out.huff 1/
 $ ./hufftar list out.huff
 ```
 
-Get convinced it actually compresses
----
+# Get convinced it actually compresses
 
 ```bash
 $ ./hufftar compress out.huff file1 file2 ...
